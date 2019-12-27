@@ -1,0 +1,223 @@
+@import url(https://fonts.googleapis.com/css?family=Oxygen);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+fa {
+  font-family: 'FontAwesome';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.preload * {
+  transition: none !important;
+}
+
+html
+{
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background: #fff;
+}
+
+body,
+.wrapper{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.grid-unit {
+  position: relative;
+  float: left;
+  border-top: 10px solid #fff;
+  border-left: 10px solid #fff;
+  width: 50%;
+  height: 50%;
+  perspective: 800;
+  overflow: hidden;
+}
+
+.top-left {
+  background: rgba(236,208,120,1);
+}
+
+.top-right {
+  background: rgba(217,91,67,1);
+  border-right: 10px solid #fff;
+}
+
+.bottom-right {
+  background: rgba(192,41,66,1);
+  border-bottom: 10px solid #fff;
+  border-right: 10px solid #fff;
+}
+
+.bottom-left {
+  background: rgba(84,36,55,1);
+  border-bottom: 10px solid #fff;
+}
+
+.swing-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  font-size: 2.5em;
+  color: #fff;
+  font-family: Oxygen, arial, sans-serif;
+  transform-origin: left 50%;
+  transform: rotateY(120deg);
+  transition: transform .5s ease;
+  letter-spacing: -.05em;
+  text-shadow: 0 1px 0 rgba(0,0,0,.2);
+}
+
+.top-right .swing-panel,
+.bottom-right .swing-panel{
+  transform-origin: right 50%;
+  transform: rotateY(-120deg);
+}
+
+.desc {
+  display: block;
+  position: absolute;
+   padding: 5%;
+}
+
+.label {
+  position: absolute;
+  font-family: Oxygen, arial, sans-serif;
+  color: #fff;
+  font-size: 1.2em;
+  opacity: 1;
+  transition: opacity .5s ease;
+}
+
+.grid-unit:hover .label {
+  opacity: 0;
+}
+
+.top-left .label {
+  bottom: 100px;
+  right: 80px;
+  transform: rotate(45deg);
+}
+
+.top-right .label {
+  bottom: 100px;
+  left: 80px;
+  transform: rotate(-45deg);
+}
+
+.bottom-left .label {
+  top: 100px;
+  right: 80px;
+  transform: rotate(-45deg);
+}
+
+.bottom-right .label {
+  top: 100px;
+  left: 80px;
+  transform: rotate(45deg);
+}
+
+.top-left .desc {
+  top: 0;
+  left: 0;
+}
+
+.top-right .desc {
+  top: 0;
+  right: 0;
+}
+
+.bottom-left .desc {
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-right .desc {
+  bottom: 0;
+  right: 0;
+}
+
+.grid-unit:hover .swing-panel {
+  transform: rotateY(0deg);
+}
+
+.sphere {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255,255,255,1);
+  border-radius: 500px;
+  transition: background-color .25s ease;
+  opacity: 1;
+}
+
+.top-left .sphere {
+  right: -100px;
+  bottom: -100px;
+}
+
+.top-right .sphere {
+  left: -100px;
+  bottom: -100px;
+}
+
+.bottom-right .sphere {
+  left: -100px;
+  top: -100px;
+}
+
+.bottom-left .sphere {
+  right: -100px;
+  top: -100px;
+}
+
+.grid-unit:hover .sphere {
+  background-color: rgba(255,255,255,0);
+}
+
+.icon {
+  position: absolute;
+  font-size: 2em;
+  transition: all .25s ease;
+  z-index: 5;
+}
+
+.bottom-left .icon {
+  top: 20px;
+  right: 30px;
+  color: rgba(84,36,55,1);
+}
+
+.bottom-right .icon {
+  top: 20px;
+  left: 22px;
+  color: rgba(192,41,66,1);
+}
+
+.top-right .icon {
+  bottom: 25px;
+  left: 20px;
+  color: rgba(217,91,67,1);
+}
+
+.top-left .icon {
+  bottom: 25px;
+  right: 35px;
+  color: rgba(236,208,120,1);
+}
+
+.grid-unit:hover .icon {
+  color: #fff;
+  font-size: 4em;
+}

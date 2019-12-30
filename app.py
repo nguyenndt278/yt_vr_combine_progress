@@ -11,9 +11,13 @@ def index():
 def intro():
     return render_template("intro.html")
 
-@app.route('/visual')
-def viral():
-    return render_template("visual.html")
+@app.route('/transition')
+def transition():
+    return render_template("transition.html")
+
+# @app.route('/visual')
+# def viral():
+#     return render_template("visual.html")
 
 @app.route('/viral')
 def viral():

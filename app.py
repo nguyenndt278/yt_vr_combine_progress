@@ -11,6 +11,10 @@ def index():
 def intro():
     return render_template("intro.html")
 
+@app.route('/visual')
+def viral():
+    return render_template("visual.html")
+
 @app.route('/viral')
 def viral():
     return render_template("viral_search.html")

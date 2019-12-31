@@ -22,6 +22,10 @@ def transition():
 @app.route('/viral')
 def viral():
     return render_template("viral_search.html")
+
+@app.route('/tableau')
+def tableau():
+    return render_template("tableau.html")
     
 if __name__ == "__main__":
     app.run()

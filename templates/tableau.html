@@ -213,7 +213,7 @@
             font-family: 'Georgia';
             font-size: 18px;
             color: #fff;
-            opacity: 0.55;
+            opacity: 1;
         }
 
         @media (max-width: 720px) {
@@ -302,19 +302,19 @@
             <li class="css-tab__item">
                 <a href="" class="css-tab__link">
                     <div class="css-tab__thumb color3" data-letter="J"></div>
-                    <p class="css-tab__label">jQuery</p>
+                    <p class="css-tab__label">Multiple LR 3 Features</p>
                 </a>
             </li>
             <li class="css-tab__item">
                 <a href="" class="css-tab__link">
                     <div class="css-tab__thumb color4" data-letter="H"></div>
-                    <p class="css-tab__label">HTML</p>
+                    <p class="css-tab__label">Multiple LR 5 Features</p>
                 </a>
             </li>
             <li class="css-tab__item">
                 <a href="" class="css-tab__link">
                     <div class="css-tab__thumb color5" data-letter="B"></div>
-                    <p class="css-tab__label">Bootstrap</p>
+                    <p class="css-tab__label">NLTK</p>
                 </a>
             </li>
             <li class="css-tab__item">
@@ -324,7 +324,7 @@
                 </a>
             </li>
         </ul>
-        <a href="https://www.oguzhanyigiter.wordpress.com" class="logo" target="_blank">
+        <a href="/" class="logo" target="_blank">
             <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg" alt="" />
         </a>
     </nav>
@@ -382,20 +382,54 @@
         </section>
         <section class="section color3" data-letter="q">
             <article class="section__wrapper">
-                <h1 class="section__title">jQuery</h1>
-                <p>A powerful and popular Java Script library</p>
+                <!-- <h1 class="section__title">Linear Regression 3 Features</h1> -->
+                <p> Observation: US only cover 17% total videos but cover 45% numbers of viral videos. So, what contribute to most views?</p>
+                <h2>Hypothesis: Can we predict the views using 3 features?</h2>
+                <ol>
+                    <li>Number of subscribers</li>
+                    <li>Video's category</li>
+                    <li>Video's duration</li>
+                </ol>
+                <h2> Process:</h2>
+                <ul>
+                    <li>Use sklearn's linear regression model to perform multiple linear regression using the 3 features for `X` and views for `y`</li>
+                    <li>Compute the R2 score for the training and testing data separately</li>
+                    <li>Data size: 8,762 records</li>
+                </ul>
+                <h2> Outcome:</h2>
+                <ul>
+                    <li>Model score: 0.32</li>
+                    <li>It's not statistically significant to predict the views using number of subscriber, category, and video's duration.</li>
+                </ul>
             </article>
         </section>
+
         <section class="section color4" data-letter="e">
             <article class="section__wrapper">
-                <h1 class="section__title">HTML</h1>
-                <p>The web language: Hypertext Markup Language</p>
+                <!-- <h1 class="section__title">The Linear Regression model in Sklearn</h1> -->
+                <h2>Hypothesis: Can we predict the views using 7 features?</h2>
+                <ol>
+                    <li>Number of subscribers</li>
+                    <li>Video's category</li>
+                    <li>Video's duration</li>
+                    <li>Channel Views</li>
+                    <li>Likes</li>
+                    <li>Dislikes</li>
+                    <li>Comment Count</li>
+                </ol>
+                <h2> Outcome:</h2>
+                <ul>
+                    <li>Model score: 0.7</li>
+                    <li>It's not statistically significant to predict the views using those features.</li>
+                </ul>
+               
             </article>
         </section>
         <section class="section color5" data-letter="s">
             <article class="section__wrapper">
-                <h1 class="section__title">Bootstrap</h1>
-                <p>A mobile first web framework</p>
+                <h1 class="section__title">NLTK</h1>
+                It’s the most famous Python NLP library. NLTK is responsible for conquering many text analysis problems
+                <!-- <p>A mobile first web framework</p> -->
             </article>
         </section>
         <section class="section color6">

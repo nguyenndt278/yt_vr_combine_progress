@@ -308,13 +308,13 @@
             <li class="css-tab__item">
                 <a href="" class="css-tab__link">
                     <div class="css-tab__thumb color4" data-letter="H"></div>
-                    <p class="css-tab__label">Multiple LR 5 Features</p>
+                    <p class="css-tab__label">Multiple LR 7 Features</p>
                 </a>
             </li>
             <li class="css-tab__item">
                 <a href="" class="css-tab__link">
                     <div class="css-tab__thumb color5" data-letter="B"></div>
-                    <p class="css-tab__label">NLTK</p>
+                    <p class="css-tab__label">Sentiment Analysis</p>
                 </a>
             </li>
             <li class="css-tab__item">
@@ -427,9 +427,27 @@
         </section>
         <section class="section color5" data-letter="s">
             <article class="section__wrapper">
-                <h1 class="section__title">NLTK</h1>
-                It’s the most famous Python NLP library. NLTK is responsible for conquering many text analysis problems
+                <h1 class="section__title">Sentiment Analysis with NLTK</h1>
+                <!-- It’s the most famous Python NLP library. NLTK is responsible for conquering many text analysis problems -->
                 <!-- <p>A mobile first web framework</p> -->
+                <h2>Hypothesis: Can we predict a video's sentiment using 3 features?</h2>
+                <!-- <ol>
+                    <li>Number of subscribers</li>
+                    <li>Video's category</li>
+                    <li>Video's duration</li>
+                </ol> -->
+                <h2> Process:</h2>
+                <ul>
+                    <li>Determind sentiment using Python NLP library: NLTK</li>
+                    <!-- <li>Compute the R2 score for the training and testing data separately</li> -->
+                    <li>Data size: 7,591 records, each record contains 100 most relevent comments of a particular video</li>
+                    <li>Target categories: Positive, Negative, Neutral</li>
+                </ul>
+                <h2> Outcome- Random Forrest Model:</h2>
+                <ul>
+                    <li>Model score: 0.93</li>
+                    <li>"Subscriber Count" is the most important variable (weight 45%) in the model of determinding a video's sentiment.</li>
+                </ul>
             </article>
         </section>
         <section class="section color6">

@@ -7,6 +7,7 @@
 
   <!-- Load d3.js -->
   <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
 
   <!-- Load d3-cloud -->
   <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
@@ -68,11 +69,10 @@
         <div class="play"></div>
         <p></p>
         <input id="query" value='vn' type="text" />
-        <button class="btn" onclick="search();openTab('word_cloud');openTab('top_tag');">Top Trending by Country</button>
+        <button class="btn" onclick="search();openTab('barplot');openTab('word_cloud');openTab('top_tag');">Top Trending by Country</button>
         <button class="btn" onclick="search_most_view();openTab('word_cloud');openTab('top_tag');">Most Views by Topic</button>
-
+        <button class="fancy-btn" id='barplot' onclick="openTab('b8');" style="display:none;">Circular Barplot</button>
         <button class="fancy-btn" id='word_cloud' onclick="openTab('b4');" style="display:none;">Word Cloud</button>
-
         <button class="fancy-btn" id='top_tag' type="button" onclick="openTab('topten');" style="display:none;">Top Ten Tags</button>
         
         <pre id="response"></pre>
@@ -89,6 +89,11 @@
       <span onclick="this.parentElement.style.display='none'" class="closebtn" style="color: black;">x</span>
       <div id="my_dataviz"></div>
     </div>
+    <div id='b8' style="display:none; opacity: 90%;background:white">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn" style="color: black;">x</span>
+      <div id="my_dataviz_circular"></div>
+    </div>
+
     <div class="row">
       <div class="col-md-12">
         <div class="table-responsive">

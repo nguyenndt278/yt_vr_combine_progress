@@ -69,11 +69,11 @@
         <div class="play"></div>
         <p></p>
         <input id="query" value='vn' type="text" />
-        <button class="btn" onclick="search();openTab('barplot');openTab('word_cloud');openTab('top_tag');">Top Trending by Country</button>
-        <button class="btn" onclick="search_most_view();openTab('word_cloud');openTab('top_tag');">Most Views by Topic</button>
-        <button class="fancy-btn" id='barplot' onclick="openTab('b8');" style="display:none;">Circular Barplot</button>
-        <button class="fancy-btn" id='word_cloud' onclick="openTab('b4');" style="display:none;">Word Cloud</button>
-        <button class="fancy-btn" id='top_tag' type="button" onclick="openTab('topten');" style="display:none;">Top Ten Tags</button>
+        <button class="btn" onclick="search();">Top Trending by Country</button>
+        <button class="btn" onclick="search_most_view();">Most Views by Topic</button>
+        <button class="fancy-btn" id='barplot' onclick="openTab('b8');">Circular Barplot</button>
+        <button class="fancy-btn" id='word_cloud' onclick="openTab('b4');">Word Cloud</button>
+        <button class="fancy-btn" id='top_tag' type="button" onclick="openTab('topten');">Top Ten Tags</button>
         
         <pre id="response"></pre>
       </div>
@@ -81,9 +81,9 @@
     <div id="topten" style="display:none;opacity: 90%;background:white">
       <span onclick="this.parentElement.style.display='none'" class="closebtn" style="color: black;">x</span>
       <script async src="https://cse.google.com/cse.js?cx=001460561068599038507:t9ixttstl6q"></script>
-     
-      <div class="col-md-8" id="my_dataviz_bar"></div>
       <div class="gcse-search"></div>
+      <div class="col-md-8" id="my_dataviz_bar"></div>
+      
     </div>
     <div id='b4' style="display:none; opacity: 90%;background:white">
       <span onclick="this.parentElement.style.display='none'" class="closebtn" style="color: black;">x</span>

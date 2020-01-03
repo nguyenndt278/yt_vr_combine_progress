@@ -5,7 +5,7 @@ function onClientLoad() {
 }
 // Called automatically when YouTube API interface is loaded 
 function onYouTubeApiLoad() {
-  gapi.client.setApiKey('AIzaSyAUlDVsMCBRcnIrKfvdSk5v7pDvpxoFpY8');
+  gapi.client.setApiKey('AIzaSyAGPp2kfCY5I8cc7RaK0wyhr1d3sLkDsSI');
 }
 
 // Called when the search button is clicked in the html code
@@ -78,7 +78,7 @@ function onSearchResponse(response) {
   // console.log(JSON.stringify(data));
   // console.log(Object.keys(data)[0]);
 
-  var margin = {top: 100, right: 0, bottom: 0, left: 0},
+  var margin = {top: 100, right: 0, bottom: 0, left: 150},
   width = 760 - margin.left - margin.right,
   height = 760 - margin.top - margin.bottom,
   innerRadius = 90,
@@ -127,8 +127,8 @@ var mouseover = function(d) {
 var mousemove = function(d) {
   tooltip
     .html("Title: " + d.title_name)
-    .style("left", (d3.mouse(this)[0]+1) + "px")
-    .style("top", (d3.mouse(this)[1]) + "px")
+    .style("left", (d3.mouse(this)[0]-2) + "px")
+    .style("top", (d3.mouse(this)[1]+400) + "px")
 }
 var mouseleave = function(d) {
   tooltip
@@ -144,7 +144,18 @@ svg.append("g")
   .data(data)
   .enter()
   .append("path")
-    .attr("fill", "#69b3a2")
+    // .attr("fill", "#69b3a2")
+    .attr("fill", function(d) {
+      if (d.view_name > 20000000) {
+        return "#004d57";
+      } else if (d.view_name > 10000000) {
+        return "#2c6a75";
+      }
+     else if (d.view_name > 5000000) {
+      return "#6ea9b4";
+    }
+      return "#8ecad6";
+    })
     .attr("d", d3.arc()     // imagine your doing a part of a donut plot
         .innerRadius(innerRadius)
         .outerRadius(function(d) { return y(d.view_name); })
@@ -208,9 +219,9 @@ svg.append("g")
 
 
   // set the dimensions and margins of the graph
-  var margin = { top: 5, right: 10, bottom: 5, left: 10 },
+  var margin = { top: 50, right: 10, bottom: 160, left: 10 },
     width = 890 - margin.left - margin.right,
-    height = 660 - margin.top - margin.bottom;
+    height = 800 - margin.top - margin.bottom;
 
   // append the svg object to the body of the page
   var svg = d3.select("#my_dataviz").append("svg")
@@ -254,9 +265,9 @@ svg.append("g")
   }
 
   // set the dimensions and margins of the graph
-  var margin = { top: 100, right: 30, bottom: 40, left: 180 },
+  var margin = { top: 100, right: 30, bottom: 130, left: 180 },
     width = 560 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    height = 700 - margin.top - margin.bottom;
 
   // append the svg object to the body of the page
   var svg = d3.select("#my_dataviz_bar")

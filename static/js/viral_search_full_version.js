@@ -30,7 +30,7 @@ function search_most_view() {
     q: query
   });
   // Send the request to the API server, call the onSearchResponse function when the data is returned
- 
+  request.execute(onSearchResponse_most_view);
 }
 
 // Triggered by this line: request.execute(onSearchResponse);
@@ -320,6 +320,7 @@ svg.append("g")
     .attr("fill", "#6c9a5a")
 
   for (var i = 0; i < video_id_list.length; i++) {
+    // function search_comment() {
     var request = gapi.client.youtube.commentThreads.list({
       part: 'snippet',
       textFormat: "plainText",
@@ -328,7 +329,7 @@ svg.append("g")
       order: "relevance"
     });
     request.execute(onSearchResponse_comment);
-
+    // console.log(video_id_list[i]);
   }
   comments_list = [];
   function onSearchResponse_comment(responsee) {
@@ -394,7 +395,7 @@ function onSearchResponse_most_view(response) {
     var videoID = response.items[i].id;
     video_id_list.push(videoID);
     var video = "<iframe width='420' height='315' src='https://www.youtube.com/embed/" + videoID + "'></iframe>";
-  
+    buildTable_most_view(publishedAt, title, description, channelTitle, channelId, videoID, video);
   }
 
   for (var i = 0; i < video_id_list.length; i++) {
@@ -432,6 +433,17 @@ function onSearchResponse_most_view(response) {
     // trow.append("td").text(comment_detail);
     trow.append("td").html("<textarea id='testBox'>" + comment_detail + "</textarea>");;
   };
+  function buildTable_most_view(publishedAt, title, description, channelTitle, channelId, videoID) {
+    var table = d3.select("#summary-table");
+    var tbody = table.select("tbody");
+    var trow;
+    trow = tbody.append("tr");
+    trow.append("td").html("<iframe width='400' height='310' src='https://www.youtube.com/embed/" + videoID + "'></iframe>");
+    trow.append("td").text(title);
+    trow.append("td").text(channelTitle);
+    trow.append("td").text(description);
+    trow.append("td").text(publishedAt);
+  }
 }
 
 

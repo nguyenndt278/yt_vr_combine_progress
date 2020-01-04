@@ -78,9 +78,9 @@ function onSearchResponse(response) {
   // console.log(JSON.stringify(data));
   // console.log(Object.keys(data)[0]);
 
-  var margin = {top: 100, right: 0, bottom: 0, left: 150},
+  var margin = {top: 100, right: 0, bottom: 120, left: 150},
   width = 760 - margin.left - margin.right,
-  height = 760 - margin.top - margin.bottom,
+  height = 780 - margin.top - margin.bottom,
   innerRadius = 90,
   outerRadius = Math.min(width, height) / 2;   // the outerRadius goes from the middle of the SVG area to the border
 
@@ -219,9 +219,9 @@ svg.append("g")
 
 
   // set the dimensions and margins of the graph
-  var margin = { top: 50, right: 10, bottom: 160, left: 10 },
-    width = 890 - margin.left - margin.right,
-    height = 800 - margin.top - margin.bottom;
+  var margin = { top: 50, right: 10, bottom: 100, left: 10 },
+    width = 790 - margin.left - margin.right,
+    height = 700 - margin.top - margin.bottom;
 
   // append the svg object to the body of the page
   var svg = d3.select("#my_dataviz").append("svg")
@@ -267,7 +267,7 @@ svg.append("g")
   // set the dimensions and margins of the graph
   var margin = { top: 100, right: 30, bottom: 130, left: 180 },
     width = 560 - margin.left - margin.right,
-    height = 700 - margin.top - margin.bottom;
+    height = 600 - margin.top - margin.bottom;
 
   // append the svg object to the body of the page
   var svg = d3.select("#my_dataviz_bar")

@@ -69,22 +69,24 @@ function onSearchResponse_most_view_sister(response) {
     return wordFrequency;
   }
 
-  var stopwords = ['-', '|', '(','For','for','The','the',
-  'Of','of','&','&amp;','My','To','to','With','with',
-  'ft.','In','in','We','we','Are','are','/', 'I', 'A',
-  'i', 'me', 'my', 'myself', 'we', 'our','THE','...,The',
+  var stopwords = ['-', '|', '(', 'For', 'for', 'The', 'the',
+    'Of', 'of', '&', '&amp;', 'My', 'To', 'to', 'With', 'with',
+    'will', 'to', 'on', 'and', 'a', 'Asia&#39;s', 'from', 'l',
+    'ft.', 'In', 'in', 'We', 'we', 'Are', 'are', '/', 'I', 'A', 'You', 'you',
+    'Will', 'Have', 'Wanna', 'at', 'What',
+    'i', 'me', 'my', 'myself', 'we', 'our', 'THE', '...,The',
     'ours', 'ourselves', 'you', 'your', 'yours', 'yourself',
     'yourselves', 'he', 'him', 'his', 'himself', 'she', 'her', 'hers', 'herself',
     'it', 'its', 'itself', 'they', 'them', 'their', 'theirs', 'themselves', 'what',
-    'which', 'who', 'whom', 'This','this', 'that', 'these', 'those', 'am', 'is', 'are', 'was',
+    'which', 'who', 'whom', 'This', 'this', 'that', 'these', 'those', 'am', 'is', 'are', 'was',
     'were', 'be', 'been', 'being', 'have', 'has', 'had', 'having', 'do', 'does', 'did',
     'doing', 'a', 'an', 'the', 'and', 'but', 'if', 'or', 'because', 'as', 'until', 'while',
     'of', 'at', 'by', 'for', 'with', 'about', 'against', 'between', 'into', 'through', 'during',
-    'before', 'after', 'above', 'below', 'to', 'from', 'up', 'down', 'in', 'out', 'on', 'off', 
-    'over', 'under', 'again', 'further', 'then', 'once', 'here', 'there', 'when', 'where', 'why', 
-    'how', 'all', 'any', 'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such', 'no', 'nor', 
-    'not', 'only', 'own', 'same', 'so', 'than', 'too', 'very', 's', 't', 'can', 'will', 'just', 'don', 
-    'should', 'now']
+    'before', 'after', 'above', 'below', 'to', 'from', 'up', 'down', 'in', 'out', 'on', 'off',
+    'over', 'under', 'again', 'further', 'then', 'once', 'here', 'there', 'when', 'where', 'why',
+    'how', 'all', 'any', 'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such', 'no', 'nor',
+    'not', 'only', 'own', 'same', 'so', 'than', 'too', 'very', 's', 't', 'can', 'will', 'just', 'don',
+    'should', 'now'];
 
   function remove_stopwords(str) {
     res = []

@@ -3,12 +3,12 @@
 	background: red;
 	border-radius: 50% / 10%;
 	color: #ffffff;
-	font-size: 2em; /* change this to change size */
+	font-size: 1.5em; /* change this to change size */
 	height: 3em;
 	/* margin: 20px auto; */
 	padding: 0;
 	position: absolute;
-	margin-left: 1120px;
+	margin-left: 1110px;
 	margin-top: 140px;
 	text-align: center;
 	text-indent: 0.1em;

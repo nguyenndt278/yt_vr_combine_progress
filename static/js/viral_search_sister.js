@@ -69,7 +69,7 @@ function onSearchResponse_most_view_sister(response) {
     return wordFrequency;
   }
 
-  var stopwords = ['-', '|', '(', 'For', 'for', 'The', 'the',
+  var stopwords = ['-', ',', ':', 'become', 'might','|', '(', 'For', 'for', 'The', 'the',
     'Of', 'of', '&', '&amp;', 'My', 'To', 'to', 'With', 'with',
     'will', 'to', 'on', 'and', 'a', 'Asia&#39;s', 'from', 'l',
     'ft.', 'In', 'in', 'We', 'we', 'Are', 'are', '/', 'I', 'A', 'You', 'you',

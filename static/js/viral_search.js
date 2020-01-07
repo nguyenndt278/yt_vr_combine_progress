@@ -10,7 +10,7 @@ function onYouTubeApiLoad() {
 
 // Called when the search button is clicked in the html code
 function search() {
-  var query = document.getElementById('query').value;
+  var query = document.getElementById('autocomplete-default').value;
   // Use the JavaScript client library to create a search.list() API call.
   var request = gapi.client.youtube.videos.list({
     part: 'snippet, statistics', chart: "mostPopular", maxResults: 50,
@@ -21,7 +21,7 @@ function search() {
 }
 
 function search_most_view() {
-  var query = document.getElementById('query').value;
+  var query = document.getElementById('autocomplete-default').value;
   // Use the JavaScript client library to create a search.list() API call.
   var request = gapi.client.youtube.search.list({
     part: 'snippet',

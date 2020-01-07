@@ -1,3 +1,7 @@
+#top-pad {
+	padding-top: 20px;
+	/* padding-right: 20px; */
+}
 
 .play { 
 	background: red;
@@ -9,7 +13,7 @@
 	padding: 0;
 	position: absolute;
 	margin-left: 1110px;
-	margin-top: 140px;
+	margin-top: 120px;
 	text-align: center;
 	text-indent: 0.1em;
 	transition: all 150ms ease-out;
@@ -135,25 +139,24 @@
 
 
 #query{
-	/* margin: 50px 40%; */
 	background: -webkit-linear-gradient(#cde1ca 0%, #8ed98a 100%);
 	background: -moz-linear-gradient(#cde1ca 0%, #8ed98a 100%);
 	background: -o-linear-gradient(#cde1ca 0%, #8ed98a 100%);
 	background: linear-gradient(#cde1ca 0%, #8ed98a 100%);
-	height: 36px;
-	width: 200px;
-	border-radius: 10px;
-	border: 2px #666 solid;
-	/* color: #CBCBCB; */
-	/* font-size: 20px; */
-	/* margin-top: 10px; */
+	/* height: 36px; */
+	/* width: 200px; */
+	/* border-radius: 10px; */
+	/* border: 2px #666 solid; */
   }
+
   #query:focus{
 	background: linear-gradient(#e1dfce 0%, #ffa600 100%);
   }
 
 .btn {
 	text-decoration: none;
+	margin-left: 4px;
+	margin-right: 4px;
 	border: 3px solid rgb(214, 196, 218);
 	position: relative;
 	overflow: hidden;
@@ -194,6 +197,7 @@
 	}
 
 	.fancy-btn{
+		margin-left: 2px;
 		display:inline-block;
 		position:relative;
 		/* padding:10px 20px; */

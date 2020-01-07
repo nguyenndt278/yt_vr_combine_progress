@@ -10,7 +10,7 @@ function onYouTubeApiLoad() {
 
 // Called when the search button is clicked in the html code
 function search_most_view_sister() {
-  var query = document.getElementById('query').value;
+  var query = document.getElementById('autocomplete-default').value;
   // Use the JavaScript client library to create a search.list() API call.
   var request = gapi.client.youtube.search.list({
     part: 'snippet',
@@ -43,6 +43,8 @@ function onSearchResponse_most_view_sister(response) {
     var videoID = response.items[i].id.videoId;
     video_id_list.push(videoID);
     var video = "<iframe width='420' height='315' src='https://www.youtube.com/embed/" + videoID + "'></iframe>";
+    console.log(videoID);
+
 
     buildTable_most_view_sister(publishedAt, title, description, channelTitle, channelId, videoID);
   }

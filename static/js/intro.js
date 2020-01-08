@@ -1,9 +1,9 @@
-jQuery(function(){
+jQuery(function () {
 
-    $(window).load(function(){
-    
+  $(window).load(function () {
+
     $('.wrapper').removeClass('preload');
-    
-    });
-  
+
   });
+
+});

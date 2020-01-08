@@ -2,109 +2,118 @@
 <html>
 
 <head>
-
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/mystyle_intro.css">
-    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
-      rel="stylesheet" type="text/css">
-    <link href="../static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-    <link href="../static/css/stylish-portfolio.css" rel="stylesheet">
-
-    <a class="menu-toggle rounded" href="#">
-        <i class="fas fa-bars"></i>
-      </a>
-      <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-          <li class="sidebar-brand">
-            <a class="js-scroll-trigger" href="#page-top"></a>
-          </li>
-          <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="/">Home</a>
-          </li>
-          <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="/intro">Intro</a>
-          </li>
-          <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#portfolio">Observation</a>
-          </li>
-          <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="/viral">Viral Search</a>
-          </li>
-        </ul>
-      </nav>
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/css/mystyle_intro.css">
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+    rel="stylesheet" type="text/css">
+  <link href="../static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+  <link href="../static/css/stylish-portfolio.css" rel="stylesheet">
+  <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#page-top"></a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="/">Home</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="/intro">Intro</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="/tableau">Observation</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="/viral">Viral Searcher</a>
+      </li>
+    </ul>
+  </nav>
 </head>
 
 <body>
-    <div class="wrapper preload">
-        <section class="grid-unit top-left">
-            <div class="swing-panel">
-                <span class="desc">Youtube API + Google Customer Search API</span>
-            </div>
-            <div class="sphere"></div>
-            <span class="icon fab fa-youtube"></span>
-            <span class="label">Source</span>
-        </section>
-        <section class="grid-unit top-right">
-            <div class="swing-panel">
-                <span class="desc">What is trending on Youtube?</span>
-            </div>
-            <div class="sphere"></div>
-            <span class="icon fas fa-search"></span>
-            <span class="label">Question</span>
-        </section>
-        <section class="grid-unit bottom-left">
-            <div class="swing-panel">
-                <span class="desc">Interative Searcher
-                  
-                </span>
-                <a href="/transition" ><i class="fas fa-forward" style="font-size:60px;color:#0079b1;"></i></a>
-                
-            </div>
-            <div class="sphere"></div>
-            <span class="icon far fa-lightbulb"></span>
-            <span class="label">Experiment</span>
-        </section>
-        <section class="grid-unit bottom-right">
-            <div class="swing-panel">
-                <span class="desc">1) Factor affects viral videos? 2) Guess sentiment</span>
-            </div>
-            <div class="sphere"></div>
-            <span class="icon fas fa-shapes"></span>
-            <span class="label">Prediction</span>
-        </section>
-    </div><!-- end wrapper -->
-      <!-- Scroll to Top Button-->
+  <div class="wrapper preload">
+    <section class="grid-unit top-left">
+      <div class="swing-panel">
+        <span class="desc">
+          <ul>
+            <li>Youtube API</li>
+            <li>Google Customer Search API</li>
+            <li>Google Trends DataStore</li>
+          </ul>
+        </span>
+      </div>
+      <div class="sphere"></div>
+      <span class="icon fab fa-youtube"></span>
+      <span class="label">Data Sources</span>
+    </section>
+    <section class="grid-unit top-right">
+      <div class="swing-panel">
+        <span class="desc">What is trending on Youtube?
+          <ul>
+            <li>Analyze top trending videos</li>
+            <li>Anticipate factors that likely affect viral videos' views</li>
+          </ul>
+        </span>
+      </div>
+      <div class="sphere"></div>
+      <span class="icon fas fa-search"></span>
+      <span class="label">Question</span>
+    </section>
+    <section class="grid-unit bottom-left">
+      <div class="swing-panel">
+        <span class="desc">Engine for search and visualization pursposes
+        </span>
+        <a href="/transition"><i class="fas fa-forward" style="font-size:42px;color:#0079b1;"></i></a>
+      </div>
+      <div class="sphere"></div>
+      <span class="icon far fa-lightbulb"></span>
+      <span class="label">Experiment</span>
+    </section>
+    <section class="grid-unit bottom-right">
+      <div class="swing-panel">
+        <span class="desc">
+          <ul>
+            <li>Test hypothesis on views' prediction</li>
+            <li>Guess sentiment</li>
+            <li>Word suggession</li>
+          </ul>
+        </span>
+      </div>
+      <div class="sphere"></div>
+      <span class="icon fas fa-shapes"></span>
+      <span class="label">Prediction</span>
+    </section>
+  </div><!-- end wrapper -->
+  <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
-
   <!-- Bootstrap core JavaScript -->
   <script src="../static/vendor/jquery/jquery.min.js"></script>
   <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
   <!-- Plugin JavaScript -->
   <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
-
   <!-- Custom scripts for this template -->
   <script src="../static/js/stylish-portfolio.min.js"></script>
-
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script src="../static/js/intro.js" type="text/javascript"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="../static/js/intro.js" type="text/javascript"></script>
 </body>
 
 </html>

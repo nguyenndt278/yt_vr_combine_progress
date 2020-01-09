@@ -92,10 +92,17 @@ var svg = d3.select("#my_dataviz_circular")
 .append("g")
   .attr("transform", "translate(" + (width / 2 + margin.left) + "," + (height / 2 + margin.top) + ")");
 
-// d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum.csv", function(data) {
+   //legend
+   svg.append("circle").attr("cx", -310).attr("cy", -300).attr("r", 6).style("fill", "#8ecad6")
+   svg.append("circle").attr("cx", -310).attr("cy", -270).attr("r", 6).style("fill", "#6ea9b4")
+   svg.append("circle").attr("cx", -310).attr("cy", -240).attr("r", 6).style("fill", "#2c6a75")
+   svg.append("circle").attr("cx", -310).attr("cy", -210).attr("r", 6).style("fill", "#004d57")
+   svg.append("text").attr("x", -270).attr("y", -330).text("Views").style("font-size", "20px").attr("alignment-baseline", "middle")
+   svg.append("text").attr("x", -270).attr("y", -300).text(" < 5 Millions").style("font-size", "15px").attr("alignment-baseline", "middle")
+  svg.append("text").attr("x", -270).attr("y", -270).text(" 5 - 10 Millions").style("font-size", "15px").attr("alignment-baseline", "middle")
+  svg.append("text").attr("x", -270).attr("y", -240).text(" 10 - 20 Millions").style("font-size", "15px").attr("alignment-baseline", "middle")
+  svg.append("text").attr("x", -270).attr("y", -210).text(" > 20 Millions").style("font-size", "15px").attr("alignment-baseline", "middle")
 
-// Scales
-// var data=my_circular;
 var x = d3.scaleBand()
     .range([0, 2 * Math.PI])    // X axis goes from 0 to 2pi = all around the circle. If I stop at 1Pi, it will be around a half circle
     .align(0)                  // This does nothing
@@ -108,12 +115,14 @@ var y = d3.scaleRadial()
     // create a tooltip
   var tooltip = d3.select("#my_dataviz_circular")
   .append("div")
-  .style("opacity", 0)
+  // .style("opacity", 0)
   .attr("class", "tooltip")
-  .style("background-color", "white")
-  .style("border", "solid")
-  .style("border-width", "2px")
-  .style("border-radius", "2px")
+  .style("background-color", "transparent")
+  // .style("border", "solid")
+  .style("border-width", "1px")
+  .style("border-radius", "1px")
+  .style("width", "90px")
+  .style("height", "80px")
   // .style("padding", "1px")
 
 // Three function that change the tooltip when user hover / move / leave a cell
@@ -127,8 +136,8 @@ var mouseover = function(d) {
 var mousemove = function(d) {
   tooltip
     .html("Title: " + d.title_name)
-    .style("left", (d3.mouse(this)[0]-2) + "px")
-    .style("top", (d3.mouse(this)[1]+400) + "px")
+    .style("left", "600px")
+    .style("top", "400px")
 }
 var mouseleave = function(d) {
   tooltip

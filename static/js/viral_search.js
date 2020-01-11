@@ -93,15 +93,18 @@ var svg = d3.select("#my_dataviz_circular")
   .attr("transform", "translate(" + (width / 2 + margin.left) + "," + (height / 2 + margin.top) + ")");
 
    //legend
-   svg.append("circle").attr("cx", -310).attr("cy", -300).attr("r", 8).style("fill", "#8ecad6")
-   svg.append("circle").attr("cx", -310).attr("cy", -270).attr("r", 8).style("fill", "#6ea9b4")
-   svg.append("circle").attr("cx", -310).attr("cy", -240).attr("r", 8).style("fill", "#2c6a75")
-   svg.append("circle").attr("cx", -310).attr("cy", -210).attr("r", 8).style("fill", "#004d57")
-   svg.append("text").attr("x", -290).attr("y", -330).text("Views").style("font-size", "20px").attr("alignment-baseline", "middle")
-   svg.append("text").attr("x", -290).attr("y", -300).text(" < 5 Millions").style("font-size", "15px").attr("alignment-baseline", "middle")
-  svg.append("text").attr("x", -290).attr("y", -270).text(" 5 - 10 Millions").style("font-size", "15px").attr("alignment-baseline", "middle")
-  svg.append("text").attr("x", -290).attr("y", -240).text(" 10 - 20 Millions").style("font-size", "15px").attr("alignment-baseline", "middle")
-  svg.append("text").attr("x", -290).attr("y", -210).text(" > 20 Millions").style("font-size", "15px").attr("alignment-baseline", "middle")
+   svg.append("circle").attr("cx", -310).attr("cy", -300).attr("r", 8).style("fill", "#b1ecf8")
+   svg.append("circle").attr("cx", -310).attr("cy", -270).attr("r", 8).style("fill", "#8ecad6")
+   svg.append("circle").attr("cx", -310).attr("cy", -240).attr("r", 8).style("fill", "#6ea9b4")
+   svg.append("circle").attr("cx", -310).attr("cy", -210).attr("r", 8).style("fill", "#2c6a75")
+   svg.append("circle").attr("cx", -310).attr("cy", -180).attr("r", 8).style("fill", "#004d57")
+   svg.append("text").attr("x", -290).attr("y", -330).text("Views (in Millions)").style("font-size", "16px").attr("alignment-baseline", "middle")
+   svg.append("text").attr("x", -290).attr("y", -300).text(" < 1").style("font-size", "15px").attr("alignment-baseline", "middle")
+   svg.append("text").attr("x", -290).attr("y", -270).text(" 1 - 5").style("font-size", "15px").attr("alignment-baseline", "middle")
+  svg.append("text").attr("x", -290).attr("y", -240).text(" 5 - 10").style("font-size", "15px").attr("alignment-baseline", "middle")
+  svg.append("text").attr("x", -290).attr("y", -210).text(" 10 - 20").style("font-size", "15px").attr("alignment-baseline", "middle")
+  svg.append("text").attr("x", -290).attr("y", -180).text(" > 20").style("font-size", "15px").attr("alignment-baseline", "middle")
+
 
 var x = d3.scaleBand()
     .range([0, 2 * Math.PI])    // X axis goes from 0 to 2pi = all around the circle. If I stop at 1Pi, it will be around a half circle
@@ -109,7 +112,7 @@ var x = d3.scaleBand()
     .domain(data.map(function(d) { return d.title_name; })); // The domain of the X axis is the list of states.
 var y = d3.scaleRadial()
     .range([innerRadius, outerRadius])   // Domain will be define later.
-    .domain([0, 28000000]); // Domain of Y is from 0 to the max seen in the data
+    .domain([0, 38000000]); // Domain of Y is from 0 to the max seen in the data
 
 
     // create a tooltip
@@ -121,7 +124,7 @@ var y = d3.scaleRadial()
   // .style("border", "solid")
   .style("border-width", "1px")
   .style("border-radius", "1px")
-  .style("width", "90px")
+  .style("width", "99px")
   .style("height", "90px")
   // .call(wrap, 30);
   // .style("padding", "1px")
@@ -137,8 +140,8 @@ var mouseover = function(d) {
 var mousemove = function(d) {
   tooltip
     .html(d.title_name)
-    .style("left", "400px")
-    .style("top", "400px")
+    .style("left", "450px")
+    .style("top", "380px")
 }
 var mouseleave = function(d) {
   tooltip
@@ -164,7 +167,10 @@ svg.append("g")
      else if (d.view_name > 5000000) {
       return "#6ea9b4";
     }
+    else if (d.view_name > 1000000) {
       return "#8ecad6";
+    }
+      return "#b1ecf8";
     })
     .attr("d", d3.arc()     // imagine your doing a part of a donut plot
         .innerRadius(innerRadius)
@@ -187,7 +193,7 @@ svg.append("g")
       .attr("text-anchor", function(d) { return (x(d.view_name) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "end" : "start"; })
       .attr("transform", function(d) { return "rotate(" + ((x(d.title_name) + x.bandwidth() / 4) * 180 / Math.PI - 90) + ")"+"translate(" + (y(d.view_name)+10) + ",5)"; })
     .append("text")
-      .text(function(d){return(parseFloat(d.view_name).toLocaleString())})
+      .text(function(d){return((parseFloat(d.view_name)/1000000).toLocaleString())})
       .attr("transform", function(d) { return (x(d.title_name) + x.bandwidth() / 2 + Math.PI) % (10 * Math.PI) < Math.PI ? "rotate(180)" : "rotate(0)"; })
       .style("font-size", "14px")
       .attr("alignment-baseline", "middle");

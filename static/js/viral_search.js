@@ -140,7 +140,7 @@ var mouseover = function(d) {
 var mousemove = function(d) {
   tooltip
     .html(d.title_name)
-    .style("left", "450px")
+    .style("left", "500px")
     .style("top", "380px")
 }
 var mouseleave = function(d) {

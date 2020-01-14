@@ -126,8 +126,8 @@ function onSearchResponse_most_view_sister(response) {
 
   // set the dimensions and margins of the graph
   var margin = { top: 50, right: 10, bottom: 160, left: 10 },
-    width = 890 - margin.left - margin.right,
-    height = 800 - margin.top - margin.bottom;
+    width = 790 - margin.left - margin.right,
+    height = 740 - margin.top - margin.bottom;
 
   // append the svg object to the body of the page
   var svg = d3.select("#my_dataviz").append("svg")
@@ -173,7 +173,7 @@ function onSearchResponse_most_view_sister(response) {
   // set the dimensions and margins of the graph
   var margin = { top: 100, right: 30, bottom: 130, left: 180 },
     width = 560 - margin.left - margin.right,
-    height = 700 - margin.top - margin.bottom;
+    height = 580 - margin.top - margin.bottom;
 
   // append the svg object to the body of the page
   var svg = d3.select("#my_dataviz_bar")
